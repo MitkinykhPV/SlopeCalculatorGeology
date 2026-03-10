@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Polygon?>
+
+<AnchorPane fx:id="rootPane" prefHeight="1100.00" prefWidth="1463.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GeologyController">
+    <children>
+        <StackPane />
+          <!-- Вся группа Вся группа, если нужно будет увеличить в два раза "scaleGroup" scaleX="2.0" scaleY="2.0" -->
+          <Group fx:id="GeoGroup" layoutX="230.0" layoutY="96.0">
+              <children>
+
+                  <Polygon fx:id="backgroundTriangle" fill="#ffffff" points="524.3125, 0.0, 1048.6250, 908.1359, 0.0, 908.1359" stroke="black" strokeWidth="2" />
+                  <!-- Фон треугольник -->
+                  <!-- Фигуры генетических типов пород -->
+                  <!-- Магматические горные породы
+                  Polygon  layoutX="0.1" layoutY="1.0" points="6.2527, 904.5259, 522.5141, 904.5259, 522.5141, 606.4641, 264.3818, 457.4316" stroke="black" strokeWidth="1.1-->
+                  <Polygon fx:id="igneousRock" layoutX="0.1" layoutY="1.0" points="6.2527, 904.5259, 522.5141, 904.5259, 522.5141, 606.4641, 264.3818, 457.4316" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, igneous-rock" />
+                  <!-- Осадочные горные породы -->
+                  <Polygon fx:id="sedimentaryRock" layoutX="0.1" layoutY="1.0" points="526.1139, 904.5259, 1042.3723, 904.5259, 784.2402, 457.4289, 526.1139, 606.4582" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, sedimentary-rock" />
+                  <!-- Метаморфические горные породы -->
+                  <Polygon fx:id="metamorphicRock" layoutX="0.1" layoutY="1.0" points="524.3125, 7.2200, 266.1818, 454.3139, 524.3089, 603.3436, 782.4403, 454.3114" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+
+              </children>
+          </Group>
+      <Button fx:id="exitButton" layoutX="1328.0" layoutY="1006.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="50.0" prefWidth="100.0" text="Выход" />
+      <Button fx:id="backButton" layoutX="85.0" layoutY="1006.0" mnemonicParsing="false" onAction="#goBack" prefHeight="50.0" prefWidth="100.0" text="Назад" />
+    </children>
+</AnchorPane>

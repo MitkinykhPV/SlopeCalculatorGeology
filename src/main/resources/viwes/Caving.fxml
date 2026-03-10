@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="587.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CavingController">
+   <children>
+      <VBox prefHeight="595.0" prefWidth="920.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="51.0" prefWidth="428.0" text="Расчет высоты обрушения" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label prefHeight="16.0" prefWidth="150.0" text="Справка по материалам">
+                     <HBox.margin>
+                        <Insets top="40.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="449.0" prefWidth="920.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="495.0" prefWidth="222.0">
+                     <children>
+                        <ImageView fitHeight="404.0" fitWidth="284.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/SchemeCaving.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="6.0" prefHeight="52.0" prefWidth="95.0" text="Схема расчета" textAlignment="CENTER" wrapText="true">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                     </children></VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="426.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="405.0" fitWidth="289.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/CavingFack.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="50.0" prefWidth="275.0" text="Пример обрушения в условиях массива изверженных горных пород" textAlignment="CENTER" wrapText="true" />
+                     </children></VBox>
+                  <VBox prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="170.0" text="Высота полости, м" />
+                        <Label prefHeight="30.0" prefWidth="170.0" text="Коэффициент разрыхления " />
+                        <Label prefHeight="30.0" prefWidth="170.0" text="Высота обрушения, м">
+                           <VBox.margin>
+                              <Insets top="60.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="170.0" text="Полная высота обрушения, м" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="448.0" prefWidth="198.0">
+                     <children>
+                        <HBox prefHeight="372.0" prefWidth="260.0">
+                           <children>
+                              <VBox prefHeight="372.0" prefWidth="164.0">
+                                 <children>
+                                    <HBox prefHeight="30.0" prefWidth="150.0">
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="75.0" text="Ho =" />
+                                          <TextField fx:id="hoField" prefHeight="30.0" prefWidth="75.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="30.0" prefWidth="150.0">
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="75.0" text="Kp =" />
+                                          <TextField fx:id="kpField" prefHeight="30.0" prefWidth="75.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="30.0" prefWidth="150.0">
+                                       <VBox.margin>
+                                          <Insets top="60.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="75.0" text="H =" />
+                                          <Label fx:id="hResult" prefHeight="30.0" prefWidth="75.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="30.0" prefWidth="150.0">
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="75.0" text="Hp =" />
+                                          <Label fx:id="hpResult" prefHeight="30.0" prefWidth="75.0" />
+                                       </children>
+                                    </HBox>
+                                    <Button fx:id="calculateButton" mnemonicParsing="false" onAction="#calculate" prefHeight="25.0" prefWidth="100.0" text="Расчитать">
+                                       <VBox.margin>
+                                          <Insets left="40.0" top="40.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearFields" prefHeight="25.0" prefWidth="100.0" text="Очистить">
+                                       <VBox.margin>
+                                          <Insets left="40.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="44.0" prefWidth="920.0">
+               <children>
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#goBack" prefHeight="40.0" prefWidth="70.0" text="Назад" />
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exitApplication" prefHeight="40.0" prefWidth="70.0" text="Выход">
+                     <HBox.margin>
+                        <Insets left="440.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

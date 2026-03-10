@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Polygon?>
+
+<AnchorPane fx:id="rootPane" prefHeight="1033.0" prefWidth="1261.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.NomogrammaController">
+    <children>
+        <StackPane />
+          <!-- Вся группа Вся группа, если нужно будет увеличить в два раза "scaleGroup" scaleX="2.0" scaleY="2.0" -->
+          <Group fx:id="scaleGroup" layoutX="141.0" layoutY="62.0">
+              <children>
+                  <!-- Фон треугольник -->
+                  <Polygon fx:id="backgroundTriangle" fill="#eef2f3" points="524.3124, 0.0, 1048.625, 908.1358, 0.0, 908.1358" stroke="black" strokeWidth="2" />
+
+                  <!-- Фигуры классов -->
+                  <!-- Класс 1 -->
+                  <Polygon fx:id="HClass1" fill="#eef2f3" layoutX="0.1" layoutY="1.0" points="98.75, 744.3128, 283.75, 744.3128, 191.25, 904.5274, 6.25, 904.5274" stroke="black" strokeWidth="1.1" />
+
+                  <!-- Класс 2 -->
+                  <Polygon fx:id="HClass2" fill="#eef2f3" layoutX="0.1" layoutY="1.0" points="293.0, 744.3128, 478.0, 744.3128, 385.5, 904.5274, 200.5, 904.5274" stroke="black" strokeWidth="1.1" />
+
+                  <!-- Класс 3 -->
+                  <Polygon fx:id="HClass3" fill="#eef2f3" layoutX="0.1" layoutY="1.0" points="195.875, 576.0874, 380.875, 576.0874, 288.375, 736.302, 103.375, 736.302" stroke="black" strokeWidth="1.1" />
+
+                  <!-- Класс 4 -->
+                  <Polygon fx:id="HClass4" fill="#eef2f3" layoutX="0.1" layoutY="1.0" points="486.8124, 744.3128, 561.8124, 744.3128, 654.3124, 904.5274, 394.3124, 904.5274" stroke="black" strokeWidth="1.1" />
+
+                  <!-- Класс 5 -->
+                  <Polygon fx:id="HClass5" fill="#eef2f3" layoutX="0.1" layoutY="1.0" points="407.5, 544.4052, 518.75, 608.6354, 518.75, 737.0958, 296.25, 737.0958" stroke="black" strokeWidth="1.1" />
+
+                  <!-- Класс 6 -->
+                  <Polygon fx:id="HClass6" fill="#afced1" layoutY="5.0" points="330.2812, 343.2888, 422.7812, 503.5036, 385.2812, 568.4554, 200.2812, 568.4554" stroke="black" strokeWidth="1.1" />
+
+                  <!-- Класс 7 -->
+                  <Polygon fx:id="HClass7" fill="#afced1" layoutX="0.1" layoutY="1.0" points="524.3124, 342.08, 635.5624, 534.7706, 524.3124, 599.001, 413.0624, 534.7706" stroke="black" strokeWidth="1.1" />
+
+                  <!-- Класс 8 -->
+                  <Polygon fx:id="HClass8" fill="#afced1" layoutX="0.1" layoutY="1.0" points="427.1874, 175.4424, 519.6874, 335.657, 427.1874, 495.8718, 334.6874, 335.657" stroke="black" strokeWidth="1.1" />
+
+                  <!-- Класс 9 -->
+                  <Polygon fx:id="HClass9" fill="#afced1" layoutX="0.1" layoutY="1.0" points="621.4374, 175.4424, 713.9374, 335.657, 621.4374, 495.8718, 528.9374, 335.657" stroke="black" strokeWidth="1.1" />
+
+                  <!-- Класс 10 -->
+                  <Polygon fx:id="HClass10" fill="#afced1" layoutX="0.1" layoutY="1.0" points="524.3124, 7.2168, 616.8124, 167.4316, 524.3124, 327.6462, 431.8124, 167.4316" stroke="black" strokeWidth="1.1" />
+
+                  <!-- Класс 11 -->
+                  <Polygon fx:id="HClass11" fill="#dad496" layoutX="0.1" layoutY="1.0" points="570.625, 744.3128, 755.625, 744.3128, 848.125, 904.5274, 663.125, 904.5274" stroke="black" strokeWidth="1.1" />
+
+                  <!-- Класс 12 -->
+                  <Polygon fx:id="HClass12" fill="#dad496" layoutX="0.1" layoutY="1.0" points="764.875, 744.3128, 949.875, 744.3128, 1042.375, 904.5274, 857.375, 904.5274" stroke="black" strokeWidth="1.1" />
+
+                  <!-- Класс 13 -->
+                  <Polygon fx:id="HClass13" fill="#dad496" layoutX="0.1" layoutY="1.0" points="641.125, 544.4052, 752.375, 737.0958, 529.875, 737.0958, 529.875, 608.6354" stroke="black" strokeWidth="1.1" />
+
+                  <!-- Класс 14 -->
+                  <Polygon fx:id="HClass14" fill="#dad496" layoutX="0.1" layoutY="1.0" points="667.75, 576.0874, 852.75, 576.0874, 945.25, 736.302, 760.25, 736.302" stroke="black" strokeWidth="1.1" />
+
+                  <!-- Класс 15 -->
+                  <Polygon fx:id="HClass15" fill="#dad496" layoutX="0.1" layoutY="1.0" points="718.3438, 343.2888, 848.3438, 568.4554, 663.3438, 568.4554, 625.8438, 503.5036" stroke="black" strokeWidth="1.1" />
+              </children>
+          </Group>
+    </children>
+</AnchorPane>

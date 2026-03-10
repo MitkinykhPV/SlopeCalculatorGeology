@@ -1,4 +1,4 @@
-package com.mining.slopecalculator;
+package Models;
 
 public class ModelCalculator {
     protected double So;

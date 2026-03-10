@@ -1,0 +1,28 @@
+/* Корневой стиль для всех полигонов-пород */
+.rock-polygon {
+    -fx-stroke: black;
+    -fx-stroke-width: 1.1;
+    -fx-cursor: hand;
+}
+
+/* Магматические породы - текстура из фото */
+.igneous-rock {
+    -fx-fill: url('/images/igneous.jpg');
+}
+
+/* Осадочные породы */
+.sedimentary-rock {
+    -fx-fill: url('/images/sedimentary.jpg');
+}
+
+/* Метаморфические породы */
+.metamorphic-rock {
+    -fx-fill: url('/images/metamorphic.jpg');
+}
+
+/* Эффекты при наведении */
+.rock-polygon:hover {
+    -fx-opacity: 0.5;
+    -fx-stroke-width: 2.0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 5);
+}

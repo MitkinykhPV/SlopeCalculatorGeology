@@ -35,21 +35,21 @@ public class ModelNomogramma {
 //
     // Статические карты для хранения значений каждой группы
     private static final Map<GROUP, List<String>> GROUP_VALUES = Map.ofEntries(
-            Map.entry(GROUP.GROUP_1, List.of("Значение 1.1", "Значение 1.2")),
-            Map.entry(GROUP.GROUP_2, List.of("Значение 1.2", "Значение 1.3")),
-            Map.entry(GROUP.GROUP_3, List.of("Значение 1.3", "Значение 1.1")),
-            Map.entry(GROUP.GROUP_4, List.of("Значение 1.1", "Значение 1.6")),
-            Map.entry(GROUP.GROUP_5, List.of("Значение 1.4", "Значение 1.1")),
-            Map.entry(GROUP.GROUP_6, List.of("Значение 1.3", "Значение 1.2")),
-            Map.entry(GROUP.GROUP_7, List.of("Значение 1.2", "Значение 1.2")),
-            Map.entry(GROUP.GROUP_8, List.of("Значение 1.4", "Значение 1.2")),
-            Map.entry(GROUP.GROUP_9, List.of("Значение 1.7", "Значение 1.2")),
-            Map.entry(GROUP.GROUP_10, List.of("Значение 1.2", "Значение 1.2")),
-            Map.entry(GROUP.GROUP_11, List.of("Значение 1.5", "Значение 1.2")),
-            Map.entry(GROUP.GROUP_12, List.of("Значение 1.7", "Значение 1.2")),
-            Map.entry(GROUP.GROUP_13, List.of("Значение 1.2", "Значение 1.2")),
-            Map.entry(GROUP.GROUP_14, List.of("Значение 1.3", "Значение 1.2")),
-            Map.entry(GROUP.GROUP_15, List.of("Значение 1.2", "Значение 1.2"))
+            Map.entry(GROUP.GROUP_1, List.of("1.85", "2.7")),
+            Map.entry(GROUP.GROUP_2, List.of("1.8", "2.7")),
+            Map.entry(GROUP.GROUP_3, List.of("1.7", "2.65")),
+            Map.entry(GROUP.GROUP_4, List.of("1.6", "2.6")),
+            Map.entry(GROUP.GROUP_5, List.of("1.6", "2.6")),
+            Map.entry(GROUP.GROUP_6, List.of("1.5", "2.7")),
+            Map.entry(GROUP.GROUP_7, List.of("1.4", "2.8")),
+            Map.entry(GROUP.GROUP_8, List.of("1.3", "2.9")),
+            Map.entry(GROUP.GROUP_9, List.of("1.2", "1.8")),
+            Map.entry(GROUP.GROUP_10, List.of("1.2", "2.8")),
+            Map.entry(GROUP.GROUP_11, List.of("1.3", "1.5")),
+            Map.entry(GROUP.GROUP_12, List.of("1.05", "1.3")),
+            Map.entry(GROUP.GROUP_13, List.of("1.3", "1.4")),
+            Map.entry(GROUP.GROUP_14, List.of("1.1", "1.4")),
+            Map.entry(GROUP.GROUP_15, List.of("1.2", "1.7"))
     );
 
     // Метод для получения значений группы

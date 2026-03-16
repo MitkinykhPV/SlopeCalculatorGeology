@@ -30,7 +30,7 @@ import java.io.IOException;
 
 public class CalculatorController {
     //Комент ради комента
-    // Все поля должны быть объявлены с @FXML
+
     @FXML
     private TextField soField;
     @FXML
@@ -59,6 +59,7 @@ public class CalculatorController {
     @FXML
     private Button backButton; // Добавьте эту кнопку в FXML если хотите
 
+    private NomogrammaController nomogrammaController;
 
     @FXML
     private void initialize() {
@@ -70,6 +71,34 @@ public class CalculatorController {
         }
             setupSpravkaButton();
         }
+    // Новый метод для установки значений из выбранного класса
+    public void setClassValues(double kr, double yo) {
+        if (krField != null && yoField != null) {
+            // Форматируем с двумя знаками после запятой
+            krField.setText(String.format("%.2f", kr));
+            yoField.setText(String.format("%.2f", yo));
+
+            // Подсвечиваем измененные поля (опционально)
+            highlightField(krField);
+            highlightField(yoField);
+
+
+        }
+    }
+
+    private void highlightField(TextField field) {
+        // Сохраняем оригинальный стиль
+        String originalStyle = field.getStyle();
+
+        // Подсвечиваем зеленым
+        field.setStyle("-fx-background-color: #90EE90;");
+
+        // Возвращаем обычный стиль через 1 секунду
+        javafx.animation.PauseTransition pause =
+                new javafx.animation.PauseTransition(javafx.util.Duration.seconds(1));
+        pause.setOnFinished(event -> field.setStyle(originalStyle));
+        pause.play();
+    }
     private void setupSpravkaButton() {
         if (Spravka != null) {
             // Сохраняем оригинальное заполнение (текстуру)
@@ -105,6 +134,7 @@ public class CalculatorController {
             loadSpravkaTexture();
         }
     }
+
         private void loadSpravkaTexture () {
             try {
                 // Загружаем изображение для кнопки справки
@@ -127,6 +157,9 @@ public class CalculatorController {
                 // Загружаем окно справки (не закрывая текущее)
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/viwes/Nomogramma.fxml"));
                 Parent root = loader.load();
+
+                NomogrammaController nomogrammaController = loader.getController();
+                nomogrammaController.setCalculatorController(this);
 
                 Stage spravkaStage = new Stage();
                 spravkaStage.setTitle("Справка");

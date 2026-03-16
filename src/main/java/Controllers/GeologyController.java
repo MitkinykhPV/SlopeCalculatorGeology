@@ -26,6 +26,7 @@ import java.io.BufferedInputStream;
 
 
     public class GeologyController implements Initializable {
+        private Clip backgroundMusicClip;
         @FXML
         private Group GeoGroup;
 
@@ -47,6 +48,7 @@ import java.io.BufferedInputStream;
         public void initialize(URL location, ResourceBundle resources) {
             loadTextures();
             setupInteractivity();
+//            playBackgroundMusic();
         }
 
         private void loadTextures() {
@@ -145,29 +147,29 @@ import java.io.BufferedInputStream;
         }
 //        private void playBackgroundMusic() {
 //            try {
-//                // Путь к вашему MP3 файлу
-//                String musicPath = "/sounds/background_music.mp3";
-//                URL musicUrl = getClass().getResource(musicPath);
-//
-//                if (musicUrl == null) {
-//                    System.err.println("Не найден файл музыки: " + musicPath);
+//                // Используем URL вместо InputStream
+//                URL soundURL = getClass().getResource("/sounds/background_music.wav");
+//                if (soundURL == null) {
+//                    System.err.println("Файл не найден: /sounds/background.wav");
 //                    return;
 //                }
 //
-//                Media media = new Media(musicUrl.toString());
-//                mediaPlayer = new MediaPlayer(media);
+//                AudioInputStream audioStream = AudioSystem.getAudioInputStream(soundURL);
+//                Clip clip = AudioSystem.getClip();
+//                clip.open(audioStream);
 //
-//                // Настройки воспроизведения
-//                mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE); // Бесконечный повтор
-//                mediaPlayer.setVolume(0.5); // Громкость 50%
+//                // Важно: сохраняем ссылку на clip, чтобы он не был собран сборщиком мусора
+//                // Для этого нужно объявить поле класса:
+//                // private Clip backgroundMusicClip;
+//                backgroundMusicClip = clip;
 //
-//                // Запускаем музыку
-//                mediaPlayer.play();
+//                clip.loop(Clip.LOOP_CONTINUOUSLY);
+//                clip.start();
 //
 //                System.out.println("Фоновая музыка запущена");
 //
 //            } catch (Exception e) {
-//                System.err.println("Ошибка при запуске музыки: " + e.getMessage());
+//                System.err.println("Ошибка воспроизведения: " + e.getMessage());
 //                e.printStackTrace();
 //            }
 //        }

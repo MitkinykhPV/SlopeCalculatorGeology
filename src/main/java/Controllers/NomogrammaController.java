@@ -64,6 +64,8 @@ public class NomogrammaController implements Initializable {
 
     private CalculatorController calculatorController;
 
+    private CavingController cavingController;
+
 @Override
 public void initialize(URL location, ResourceBundle resources) {
     loadTextures();
@@ -71,6 +73,9 @@ public void initialize(URL location, ResourceBundle resources) {
 }
     public void setCalculatorController(CalculatorController controller) {
         this.calculatorController = controller;
+    }
+    public void setCavingController(CavingController controller){
+        this.cavingController = controller;
     }
 private void loadTextures() {
     try {
@@ -187,10 +192,21 @@ private void setupHoverEffect(Polygon rock) {
                         Double.parseDouble(values.get(1))  // yo
                 );
 
-                System.out.println("Значения переданы в калькулятор!");
+                System.out.println("Значения переданы в первый калькулятор!");
             } else {
                 System.out.println("Калькулятор не найден (окно закрыто?)");
             }
+            if (cavingController != null) {
+                cavingController.setClassValues(
+                        Double.parseDouble(values.get(0))
+
+                );
+
+                System.out.println("Значения переданы во второй калькулятор!");
+            } else {
+                System.out.println("Калькулятор не найден (окно закрыто?)");
+            }
+
 
             // Показываем всплывающее уведомление
             showClassSelectedNotification(classNum, values);  // Используем classNum

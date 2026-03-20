@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Polygon?>
+
+<AnchorPane fx:id="rootPane" prefHeight="1100.00" prefWidth="1463.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GeologyController">
+    <children>
+        <StackPane />
+        <!-- Вся группа Вся группа, если нужно будет увеличить в два раза "scaleGroup" scaleX="2.0" scaleY="2.0" -->
+        <Group fx:id="GeoGroup" layoutX="230.0" layoutY="96.0">
+            <children>
+                <!-- Фон треугольник -->
+                <Polygon fx:id="backgroundRectangle" fill="#ffffff" points="0.0, 0.0, 756.0, 0.0, 756.0, 579.0543, 0.0, 579.0543" stroke="black" strokeWidth="2" />
+
+                <!-- Внутренняя панель, панельки щелочь, основность -->
+                <Polygon fx:id="alkaliPanel" layoutX="0.1" layoutY="1.0" points="3.0, 3.0, 23.0, 3.0, 23.0, 556.0543, 3.0, 556.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, igneous-rock" />
+
+                <Polygon fx:id="sedimentaryRock" layoutX="0.1" layoutY="1.0" points="23.0, 3.0, 753.0, 3.0, 753.0, 556.0543, 23.0, 556.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, sedimentary-rock" />
+
+                <Polygon fx:id="metamorphicRock" layoutX="0.1" layoutY="1.0" points="23.0, 556.0543, 180.0099, 556.0543, 180.0099, 576.0543, 23.0, 576.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="metamorphicRock" layoutX="0.1" layoutY="1.0" points="23.0, 556.0543, 180.0099, 556.0543, 180.0099, 576.0543, 23.0, 576.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="metamorphicRock" layoutX="0.1" layoutY="1.0" points="23.0, 556.0543, 180.0099, 556.0543, 180.0099, 576.0543, 23.0, 576.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="metamorphicRock" layoutX="0.1" layoutY="1.0" points="23.0, 556.0543, 180.0099, 556.0543, 180.0099, 576.0543, 23.0, 576.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="metamorphicRock" layoutX="0.1" layoutY="1.0" points="23.0, 556.0543, 180.0099, 556.0543, 180.0099, 576.0543, 23.0, 576.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="metamorphicRock" layoutX="0.1" layoutY="1.0" points="23.0, 556.0543, 180.0099, 556.0543, 180.0099, 576.0543, 23.0, 576.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+
+            </children>
+        </Group>
+        <Button fx:id="exitButton" layoutX="1328.0" layoutY="1006.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="50.0" prefWidth="100.0" text="Выход" />
+        <Button fx:id="backButton" layoutX="85.0" layoutY="1006.0" mnemonicParsing="false" onAction="#goBack" prefHeight="50.0" prefWidth="100.0" text="Назад" />
+    </children>
+</AnchorPane>

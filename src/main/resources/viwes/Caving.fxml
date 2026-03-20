@@ -9,13 +9,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="587.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CavingController">
+<AnchorPane prefHeight="603.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CavingController">
    <children>
-      <VBox prefHeight="595.0" prefWidth="920.0">
+      <VBox prefHeight="603.0" prefWidth="920.0">
          <children>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox prefHeight="134.0" prefWidth="920.0">
                <children>
                   <Label prefHeight="51.0" prefWidth="428.0" text="Расчет высоты обрушения" textAlignment="CENTER">
                      <font>
@@ -25,11 +26,16 @@
                         <Insets left="20.0" top="20.0" />
                      </HBox.margin>
                   </Label>
-                  <Label prefHeight="16.0" prefWidth="150.0" text="Справка по материалам">
+                  <Label prefHeight="16.0" prefWidth="150.0" text="Справка по материалам:">
                      <HBox.margin>
-                        <Insets top="40.0" />
+                        <Insets left="150.0" top="55.0" />
                      </HBox.margin>
                   </Label>
+                  <Polygon fx:id="Spravka" fill="BLUE" points="-50.0, 40.0, 54.0, 40.0, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Polygon>
                </children>
             </HBox>
             <HBox prefHeight="449.0" prefWidth="920.0">
@@ -60,12 +66,12 @@
                      <children>
                         <Label prefHeight="30.0" prefWidth="170.0" text="Высота полости, м" />
                         <Label prefHeight="30.0" prefWidth="170.0" text="Коэффициент разрыхления " />
-                        <Label prefHeight="30.0" prefWidth="170.0" text="Высота обрушения, м">
+                        <Label prefHeight="30.0" prefWidth="170.0" text="Полная высота обрушения, м">
                            <VBox.margin>
                               <Insets top="60.0" />
                            </VBox.margin>
                         </Label>
-                        <Label prefHeight="30.0" prefWidth="170.0" text="Полная высота обрушения, м" />
+                        <Label prefHeight="30.0" prefWidth="170.0" text="Высота обрушения, м" />
                      </children>
                   </VBox>
                   <VBox prefHeight="448.0" prefWidth="198.0">
@@ -83,7 +89,7 @@
                                     <HBox prefHeight="30.0" prefWidth="150.0">
                                        <children>
                                           <Label prefHeight="30.0" prefWidth="75.0" text="Kp =" />
-                                          <TextField fx:id="kpField" prefHeight="30.0" prefWidth="75.0" />
+                                          <TextField fx:id="krField" prefHeight="30.0" prefWidth="75.0" />
                                        </children>
                                     </HBox>
                                     <HBox prefHeight="30.0" prefWidth="150.0">
@@ -91,13 +97,13 @@
                                           <Insets top="60.0" />
                                        </VBox.margin>
                                        <children>
-                                          <Label prefHeight="30.0" prefWidth="75.0" text="H =" />
+                                          <Label prefHeight="30.0" prefWidth="75.0" text="Hр =" />
                                           <Label fx:id="hResult" prefHeight="30.0" prefWidth="75.0" />
                                        </children>
                                     </HBox>
                                     <HBox prefHeight="30.0" prefWidth="150.0">
                                        <children>
-                                          <Label prefHeight="30.0" prefWidth="75.0" text="Hp =" />
+                                          <Label prefHeight="30.0" prefWidth="75.0" text="H =" />
                                           <Label fx:id="hpResult" prefHeight="30.0" prefWidth="75.0" />
                                        </children>
                                     </HBox>
@@ -111,6 +117,7 @@
                                           <Insets left="40.0" />
                                        </VBox.margin>
                                     </Button>
+
                                  </children>
                               </VBox>
                            </children>
@@ -119,12 +126,16 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="44.0" prefWidth="920.0">
+            <HBox alignment="TOP_CENTER" prefHeight="67.0" prefWidth="920.0" style="-fx-background-color: #EED9A4;">
+               
                <children>
-                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#goBack" prefHeight="40.0" prefWidth="70.0" text="Назад" />
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#goBack" prefHeight="40.0" prefWidth="70.0" text="Назад">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></Button>
                   <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exitApplication" prefHeight="40.0" prefWidth="70.0" text="Выход">
                      <HBox.margin>
-                        <Insets left="440.0" />
+                        <Insets left="440.0" top="5.0" />
                      </HBox.margin>
                   </Button>
                </children>

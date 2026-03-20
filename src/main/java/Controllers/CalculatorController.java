@@ -6,26 +6,17 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-import java.net.URL;
-
-
-import javafx.fxml.Initializable;
 import javafx.scene.shape.Polygon;
 import javafx.scene.image.Image;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.paint.Color;
 import javafx.scene.effect.DropShadow;
-import java.util.ResourceBundle;
+import javafx.stage.Stage;
+import javafx.stage.Modality;
 import java.io.InputStream;
-import javafx.scene.Group;
-import javafx.event.ActionEvent;
-import javafx.scene.Node;
 import javafx.scene.control.Alert;
-
 import java.io.IOException;
 
 public class CalculatorController {
@@ -56,8 +47,7 @@ public class CalculatorController {
     private Label hResult;
     @FXML
     private Polygon Spravka;
-    @FXML
-    private Button backButton; // Добавьте эту кнопку в FXML если хотите
+
 
     private NomogrammaController nomogrammaController;
 
@@ -79,26 +69,26 @@ public class CalculatorController {
             yoField.setText(String.format("%.2f", yo));
 
             // Подсвечиваем измененные поля (опционально)
-            highlightField(krField);
-            highlightField(yoField);
+//            highlightField(krField);
+//            highlightField(yoField);
 
 
         }
     }
 
-    private void highlightField(TextField field) {
-        // Сохраняем оригинальный стиль
-        String originalStyle = field.getStyle();
-
-        // Подсвечиваем зеленым
-        field.setStyle("-fx-background-color: #90EE90;");
-
-        // Возвращаем обычный стиль через 1 секунду
-        javafx.animation.PauseTransition pause =
-                new javafx.animation.PauseTransition(javafx.util.Duration.seconds(1));
-        pause.setOnFinished(event -> field.setStyle(originalStyle));
-        pause.play();
-    }
+//    private void highlightField(TextField field) {
+//        // Сохраняем оригинальный стиль
+//        String originalStyle = field.getStyle();
+//
+//        // Подсвечиваем зеленым
+//        field.setStyle("-fx-background-color: #90EE90;");
+//
+//        // Возвращаем обычный стиль через 1 секунду
+//        javafx.animation.PauseTransition pause =
+//                new javafx.animation.PauseTransition(javafx.util.Duration.seconds(1));
+//        pause.setOnFinished(event -> field.setStyle(originalStyle));
+//        pause.play();
+//    }
     private void setupSpravkaButton() {
         if (Spravka != null) {
             // Сохраняем оригинальное заполнение (текстуру)
@@ -167,8 +157,8 @@ public class CalculatorController {
                 spravkaStage.setResizable(false);
 
                 // Устанавливаем модальность, чтобы блокировать основное окно (опционально)
-                // spravkaStage.initModality(Modality.APPLICATION_MODAL);
-                // spravkaStage.initOwner(Spravka.getScene().getWindow());
+                 spravkaStage.initModality(Modality.APPLICATION_MODAL);
+                 spravkaStage.initOwner(Spravka.getScene().getWindow());
 
                 spravkaStage.show();
 

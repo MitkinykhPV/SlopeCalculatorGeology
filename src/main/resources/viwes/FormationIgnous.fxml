@@ -14,7 +14,7 @@
         <Group fx:id="FormIgnous" layoutX="230.0" layoutY="96.0">
             <children>
 
-                <Polygon fx:id="backgroundRectangle" fill="#ffffff" layoutX="-186.0" layoutY="-27.0" points="0.0, 0.0, 507.22, 0.0, 507.22, 707.22, 0.0, 707.22" stroke="black" strokeWidth="2" />
+                <Polygon fx:id="backgroundRectangle" fill="#ffffff" layoutX="-186.0" layoutY="-27.0" points="0.0, 0.0, 507.22, 0.0, 507.22, 607.3283, 0.0, 607.3283" stroke="black" strokeWidth="2" />
                 <!-- Прямоугольники генетических типов пород -->
                 <!-- Туффиты-->
                 <Polygon fx:id="tuffites" layoutX="-186.0" layoutY="-26.0" points="3.61, 3.61, 203.61, 3.61, 203.61, 103.61, 3.61, 103.61" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, igneous-rock" />
@@ -26,10 +26,8 @@
                 <Polygon fx:id="lavas" layoutX="-186.0" layoutY="-26.0" points="3.61, 303.61, 203.61, 303.61, 203.61, 403.61, 3.61, 403.61" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
                 <!-- Субвулканические-->
                 <Polygon fx:id="subvolcanic" layoutX="-186.0" layoutY="-26.0" points="3.61, 403.61, 203.61, 403.61, 203.61, 503.61, 3.61, 503.61" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
-                <!-- Интрузивные-->
-                <Polygon fx:id="intrusive" layoutX="-186.0" layoutY="-26.0" points="3.61, 503.61, 203.61, 503.61, 203.61, 603.61, 3.61, 603.61" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
                 <!-- Плутонические-->
-                <Polygon fx:id="plutonicc" layoutX="-186.0" layoutY="-26.0" points="3.61, 603.61, 203.61, 603.61, 203.61, 703.61, 3.61, 703.61" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="intrusive" layoutX="-186.0" layoutY="-26.0" points="3.61, 503.61, 203.61, 503.61, 203.61, 603.61, 3.61, 603.61" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
 
                 <!-- Прямоугольники перечисления и описания генетических типов пород -->
                 <!-- Туффиты-->
@@ -42,18 +40,16 @@
                 <Polygon fx:id="lavasDescription" fill="#ffffff" layoutX="-186.0" layoutY="-26.0" points="203.61, 303.61, 503.61, 303.61, 503.61, 403.61, 203.61, 403.61" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
                 <!-- Субвулканические-->
                 <Polygon fx:id="subvolcanicDescription" fill="#ffffff" layoutX="-186.0" layoutY="-26.0" points="203.61, 403.61, 503.61, 403.61, 503.61, 503.61, 203.61, 503.61" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
-                <!-- Интрузивные-->
-                <Polygon fx:id="intrusiveDescription" fill="#ffffff" layoutX="-186.0" layoutY="-26.0" points="203.61, 503.61, 503.61, 503.61, 503.61, 603.61, 203.61, 603.61" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
                 <!-- Плутонические-->
-                <Polygon fx:id="plutoniccDescription" fill="#ffffff" layoutX="-186.0" layoutY="-26.0" points="203.61, 603.61, 503.61, 603.61, 503.61, 703.61, 203.61, 703.61" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="intrusiveDescription" fill="#ffffff" layoutX="-186.0" layoutY="-26.0" points="203.61, 503.61, 503.61, 503.61, 503.61, 603.61, 203.61, 603.61" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
 
             <Label layoutX="32.0" layoutY="-14.0" prefHeight="78.0" prefWidth="263.0" text="Вулканогенно-осадочные: туффиты, туфопесчаники, туфоалевролиты,  туфоаргилиты" wrapText="true" />
-            <Label layoutX="27.0" layoutY="192.0" prefHeight="72.0" prefWidth="265.0" text="Лавобрекчии" />
+                <Label layoutX="34.0" layoutY="82.0" prefHeight="49.0" prefWidth="251.0" text="Туфы" />
+                <Label layoutX="27.0" layoutY="192.0" prefHeight="72.0" prefWidth="265.0" text="Лавобрекчии" />
             <Label layoutX="27.0" layoutY="284.0" prefHeight="77.0" prefWidth="273.0" text="Лавы" />
             <Label layoutX="29.0" layoutY="381.0" prefHeight="85.0" prefWidth="275.0" text="Субвулканические" />
             <Label layoutX="27.0" layoutY="488.0" prefHeight="82.0" prefWidth="280.0" text="Интрузивные" />
-            <Label layoutX="27.0" layoutY="586.0" prefHeight="83.0" prefWidth="282.0" text="Плутонические Гранит, Сиенит, Монцанит, Диорит, Габбро, Дунит, Перидотит" wrapText="true" />
-            <Label layoutX="34.0" layoutY="82.0" prefHeight="49.0" prefWidth="251.0" text="Туфы" />
+
 
             </children>
         </Group>

@@ -8,7 +8,7 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<!--//Комент ради комента Вся группа Вся группа, если нужно будет увеличить в два раза "scaleGroup" scaleX="2.0" scaleY="2.0" -->
+<!--//DC4A1027-HDR Вся группа, если нужно будет увеличить в два раза "scaleGroup" scaleX="2.0" scaleY="2.0" -->
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DungeonCommanderController">
     <children>
         <Label text="Выберите тип расчета">

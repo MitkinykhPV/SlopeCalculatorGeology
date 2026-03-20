@@ -5,23 +5,18 @@ import Models.ModelCaving;
 public class ServisCaving extends ModelCaving {
 
     public ServisCaving(double ho, double kp) {
-        super(ho, kp);
-    }
-    double H = Ho * Kp / (Kp - 1);
-    public double calculateH(){
-        return Ho * Kp / (Kp - 1);
-
-
+        super(ho, kp);  // Передаем в родительский конструктор
     }
 
-    public void displayAllCalculationHo() {
-        double Ho = calculateH();
+    // Метод для расчета H
+    public double calculateH() {
+        // Используем геттеры родительского класса
+        return getHo() * getKp() / (getKp() - 1);
     }
-    double Hp = H - Ho;
-    public double calculateHp(){
-        return H - Ho;
-    }
-    public void displayAllCalculationHp() {
-        double Hp = calculateH();
+
+    // Метод для расчета Hp
+    public double calculateHp() {
+        double H = calculateH();  // Сначала вычисляем H
+        return H - getHo();        // Hp = H - Ho
     }
 }

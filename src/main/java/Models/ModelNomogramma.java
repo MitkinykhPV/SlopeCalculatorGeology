@@ -1,9 +1,9 @@
 package Models;
 import java.util.List;
 import java.util.Map;
-//
+//Создаем класс модели для номограммы
 public class ModelNomogramma {
-//
+    //Объявляем перечисление
     public enum GROUP {
         GROUP_1("Класс 1"),
         GROUP_2("Класс 2"),
@@ -22,11 +22,11 @@ public class ModelNomogramma {
         GROUP_15("Класс 15");
 
         private final String displayName;
-
+        // Конструктор
         GROUP(String displayName) {
             this.displayName = displayName;
         }
-
+        //Геттер для получения доступа извне
         public String getDisplayName() {
             return displayName;
         }

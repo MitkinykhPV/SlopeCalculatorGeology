@@ -68,27 +68,27 @@ public class CalculatorController {
             krField.setText(String.format("%.2f", kr));
             yoField.setText(String.format("%.2f", yo));
 
-            // Подсвечиваем измененные поля (опционально)
-//            highlightField(krField);
-//            highlightField(yoField);
+             //Подсвечиваем измененные поля (опционально)
+            highlightField(krField);
+            highlightField(yoField);
 
 
         }
     }
 
-//    private void highlightField(TextField field) {
-//        // Сохраняем оригинальный стиль
-//        String originalStyle = field.getStyle();
-//
-//        // Подсвечиваем зеленым
-//        field.setStyle("-fx-background-color: #90EE90;");
-//
-//        // Возвращаем обычный стиль через 1 секунду
-//        javafx.animation.PauseTransition pause =
-//                new javafx.animation.PauseTransition(javafx.util.Duration.seconds(1));
-//        pause.setOnFinished(event -> field.setStyle(originalStyle));
-//        pause.play();
-//    }
+    private void highlightField(TextField field) {
+        // Сохраняем оригинальный стиль
+        String originalStyle = field.getStyle();
+
+        // Подсвечиваем зеленым
+        field.setStyle("-fx-background-color: #90EE90;");
+
+        // Возвращаем обычный стиль через 1 секунду
+        javafx.animation.PauseTransition pause =
+                new javafx.animation.PauseTransition(javafx.util.Duration.seconds(1));
+        pause.setOnFinished(event -> field.setStyle(originalStyle));
+        pause.play();
+    }
     private void setupSpravkaButton() {
         if (Spravka != null) {
             // Сохраняем оригинальное заполнение (текстуру)

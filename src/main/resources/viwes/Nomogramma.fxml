@@ -12,7 +12,7 @@
           <Group fx:id="scaleGroup" layoutX="141.0" layoutY="62.0">
               <children>
                   <!-- Фон треугольник -->
-                  <Polygon fx:id="backgroundTriangle" fill="#eef2f3" points="524.3124, 0.0, 1048.625, 908.1358, 0.0, 908.1358" stroke="black" strokeWidth="2" />
+                  <Polygon fx:id="backgroundTriangle" fill="#eef2f3" points="524.3124, 0.0, 1048.625, 908.1358, 0.0, 908.1358" stroke="#eef2f3" strokeWidth="2" />
 
                   <!-- Фигуры классов -->
                   <!-- Класс 1 -->
@@ -31,7 +31,7 @@
                   <Polygon fx:id="HClass5" fill="#eef2f3" layoutX="0.1" layoutY="1.0" points="407.5, 544.4052, 518.75, 608.6354, 518.75, 737.0958, 296.25, 737.0958" stroke="black" strokeWidth="1.1" />
 
                   <!-- Класс 6 -->
-                  <Polygon fx:id="HClass6" fill="#afced1" layoutY="5.0" points="330.2812, 343.2888, 422.7812, 503.5036, 385.2812, 568.4554, 200.2812, 568.4554" stroke="black" strokeWidth="1.1" />
+                  <Polygon fx:id="HClass6" fill="#afced1" layoutX="0.1" layoutY="1.0" points="330.2812, 343.2888, 422.7812, 503.5036, 385.2812, 568.4554, 200.2812, 568.4554" stroke="black" strokeWidth="1.1" />
 
                   <!-- Класс 7 -->
                   <Polygon fx:id="HClass7" fill="#afced1" layoutX="0.1" layoutY="1.0" points="524.3124, 342.08, 635.5624, 534.7706, 524.3124, 599.001, 413.0624, 534.7706" stroke="black" strokeWidth="1.1" />

@@ -1,36 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootPane" prefHeight="1100.00" prefWidth="1463.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GeologyController">
+<AnchorPane fx:id="rootPane" prefHeight="769.0" prefWidth="813.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GeologyController">
     <children>
         <StackPane />
         <!-- Вся группа Вся группа, если нужно будет увеличить в два раза "scaleGroup" scaleX="2.0" scaleY="2.0" -->
-        <Group fx:id="GeoGroup" layoutX="230.0" layoutY="96.0">
+        <Group fx:id="TAS" layoutX="230.0" layoutY="96.0">
             <children>
                 <!-- Фон треугольник -->
-                <Polygon fx:id="backgroundRectangle" fill="#ffffff" points="0.0, 0.0, 756.0, 0.0, 756.0, 579.0543, 0.0, 579.0543" stroke="black" strokeWidth="2" />
+                <Polygon fx:id="backgroundRectangle" fill="#ebebeb" layoutX="-203.0" layoutY="-7.0" points="0.0, 0.0, 756.0, 0.0, 756.0, 579.0543, 0.0, 579.0543" stroke="black" strokeWidth="2" />
 
                 <!-- Внутренняя панель, панельки щелочь, основность -->
-                <Polygon fx:id="alkaliPanel" layoutX="0.1" layoutY="1.0" points="3.0, 3.0, 23.0, 3.0, 23.0, 556.0543, 3.0, 556.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, igneous-rock" />
+                <Polygon fx:id="alkaliPanel" fill="#ffd6f000" layoutX="-203.0" layoutY="-6.0" points="3.0, 3.0, 23.0, 3.0, 23.0, 556.0543, 3.0, 556.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, igneous-rock" />
 
-                <Polygon fx:id="sedimentaryRock" layoutX="0.1" layoutY="1.0" points="23.0, 3.0, 753.0, 3.0, 753.0, 556.0543, 23.0, 556.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, sedimentary-rock" />
+                <Polygon fx:id="vnutrPanel" fill="#ebebeb" layoutX="-203.0" layoutY="-6.0" points="23.0, 3.0, 753.0, 3.0, 753.0, 556.0543, 23.0, 556.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, sedimentary-rock" />
 
-                <Polygon fx:id="metamorphicRock" layoutX="0.1" layoutY="1.0" points="23.0, 556.0543, 180.0099, 556.0543, 180.0099, 576.0543, 23.0, 576.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
-                <Polygon fx:id="metamorphicRock" layoutX="0.1" layoutY="1.0" points="23.0, 556.0543, 180.0099, 556.0543, 180.0099, 576.0543, 23.0, 576.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
-                <Polygon fx:id="metamorphicRock" layoutX="0.1" layoutY="1.0" points="23.0, 556.0543, 180.0099, 556.0543, 180.0099, 576.0543, 23.0, 576.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
-                <Polygon fx:id="metamorphicRock" layoutX="0.1" layoutY="1.0" points="23.0, 556.0543, 180.0099, 556.0543, 180.0099, 576.0543, 23.0, 576.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
-                <Polygon fx:id="metamorphicRock" layoutX="0.1" layoutY="1.0" points="23.0, 556.0543, 180.0099, 556.0543, 180.0099, 576.0543, 23.0, 576.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
-                <Polygon fx:id="metamorphicRock" layoutX="0.1" layoutY="1.0" points="23.0, 556.0543, 180.0099, 556.0543, 180.0099, 576.0543, 23.0, 576.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="utraBasicPanel" fill="#ebecff00" layoutX="-203.0" layoutY="-6.0" points="23.0, 556.0543, 180.0099, 556.0543, 180.0099, 576.0543, 23.0, 576.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="basicPanel" fill="#daffd100" layoutX="-203.0" layoutY="-6.0" points="180.0099, 556.0543, 289.9169, 556.0543, 289.9169, 576.0543, 180.0099, 576.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="intermediatePanel" fill="#f1ffb800" layoutX="-203.0" layoutY="-6.0" points="289.9169, 556.0543, 462.6278, 556.0543, 462.6278, 576.0543, 289.9169, 576.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="silicaPanel" fill="#ffded900" layoutX="-203.0" layoutY="-6.0" points="462.6278, 556.0543, 682.4416, 556.0543, 682.4416, 576.0543, 462.6278, 576.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+
+                <Polygon fx:id="ultramafikPoligon" fill="#67c1eb" layoutX="-203.0" layoutY="-6.0" points="23.0, 556.0543, 108.5137, 424.3747, 180.0099, 556.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+
+                <Polygon fx:id="maficPolygonLower" fill="#44da78" layoutX="-203.0" layoutY="-6.0" points="148.2888, 497.6312, 235.9909, 456.7350, 289.9169, 556.0543, 180.0099, 556.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="maficPolygonMiddle" fill="#45d9b3" layoutX="-203.0" layoutY="-6.0" points="124.7592, 454.2951, 195.9906, 383.0637, 235.9906, 456.7350, 148.2888, 497.6312" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="maficPolygonUpper" fill="#45d9d2" layoutX="-203.0" layoutY="-6.0" points="108.5137, 424.3747, 168.3733, 332.1990, 195.9906, 383.0637, 124.7592, 454.2951" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+
+                <Polygon fx:id="intermediatePolygonLower" fill="#afffa1" layoutX="-203.0" layoutY="-6.0" points="289.9169, 556.0543, 235.9099, 456.7350, 373.8085, 392.4696, 462.6278, 556.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="intermediatePolygonMiddle" fill="#a3ffbe" layoutX="-203.0" layoutY="-6.0" points="235.9909, 456.7350, 195.9096, 383.0637, 307.9257, 271.1286, 373.8085, 392.4696" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="intermediatePolygonUpper" fill="#a1ffe8" layoutX="-203.0" layoutY="-6.0" points="195.9906, 383.0637, 168.3733, 332.1990, 262.4384, 187.3514, 307.9257, 271.1286" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+
+                <Polygon fx:id="AcidPolygonLower" fill="#ff9696d1" layoutX="-203.0" layoutY="-6.0" points="462.6278, 556.0543, 373.8085, 392.4696, 549.2128, 310.6773, 682.4416, 556.0543" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="AcidPolygonMiddle" fill="#ffa1b8d4" layoutX="-203.0" layoutY="-6.0" points="307.9257, 271.1286, 450.3886, 128.6657, 549.2128, 310.6773, 373.8085, 392.4696" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+                <Polygon fx:id="AcidPolygonUpper" fill="#ffb5f0d4" layoutX="-203.0" layoutY="-6.0" points="262.4384, 187.3514, 382.1577, 3.0, 450.3886, 128.6657, 307.9257, 271.1286" stroke="black" strokeWidth="1.1" styleClass="rock-polygon, metamorphic-rock" />
+            <Label layoutX="-153.0" layoutY="551.0" prefHeight="17.0" prefWidth="102.0" text="Ультраосновные" />
+            <Label layoutX="-2.0" layoutY="551.0" prefHeight="17.0" prefWidth="75.0" text="Основные" />
+            <Label layoutX="146.0" layoutY="551.0" text="Средние" />
+            <Label layoutX="349.0" layoutY="551.0" text="Кислые" />
+            <Label layoutX="-283.0" layoutY="256.0" rotate="-90.0" text="Содержание щелочных металлов" />
+
+
+
 
             </children>
         </Group>
-        <Button fx:id="exitButton" layoutX="1328.0" layoutY="1006.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="50.0" prefWidth="100.0" text="Выход" />
-        <Button fx:id="backButton" layoutX="85.0" layoutY="1006.0" mnemonicParsing="false" onAction="#goBack" prefHeight="50.0" prefWidth="100.0" text="Назад" />
+        <Button fx:id="exitButton" layoutX="691.0" layoutY="695.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="50.0" prefWidth="100.0" text="Выход" />
+        <Button fx:id="backButton" layoutX="26.0" layoutY="695.0" mnemonicParsing="false" onAction="#goBack" prefHeight="50.0" prefWidth="100.0" text="Назад" />
+      <Label layoutX="161.0" layoutY="19.0" prefHeight="50.0" prefWidth="492.0" text="Диаграмма основности и щелочности горных пород">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="354.0" layoutY="682.0" prefHeight="27.0" prefWidth="102.0" text="Основность">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Polygon fill="#9a8a64" layoutX="747.0" layoutY="76.0" points="-29.0, -3.0, 38.0, -3.0, 6.0, -60.0" stroke="BLACK" strokeType="INSIDE" />
     </children>
 </AnchorPane>
